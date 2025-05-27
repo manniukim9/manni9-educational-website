@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Manni's Hub offers high-quality educational books and applications for learners of all ages.">
+  <meta name="keywords" content="education, books, learning apps, Manni's Hub">
+  <title>Manni's Hub - Learn Smarter</title>
+  <link rel="stylesheet" href="newpro3css.css">
+</head>
+<body onload="renderCart()">
+  <header class="main-header">
+    <div class="logo">Manni's Hub</div>
+    <div class="header-controls">
+      <select id="animation-type" title="Select Slider Animation">
+        <option value="slide">Slide</option>
+        <option value="fade" selected>Fade</option>
+        <option value="zoom">Zoom</option>
+      </select>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="#" onclick="goToSlide(1)">Home</a></li>
+          <li><a href="#" onclick="goToSlide(2)">About Us</a></li>
+          <li><a href="#" onclick="goToSlide(3)">Products</a></li>
+          <li><a href="#" onclick="goToSlide(4)" class="cart-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Cart Icon" class="cart-icon"> Cart
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="slider-container">
+    <!-- Slide 1: Hero -->
+    <div class="slide slide-1" data-animation="fade">
+      <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="animate-in">Welcome to Manni's Hub</h1>
+          <p class="animate-in">Your one-stop hub for quality educational books and applications</p>
+          <button class="btn-primary animate-in" onclick="goToSlide(3)">Explore Products</button>
+        </div>
+      </section>
+    </div>
+   
+      <img src="image (4).jpg" alt="Manni, CEO of Manni's Hub" width="200">
+    </div>
+  </section>
+ 
+<!-- Slide 2: About Us -->
+<div class="slide slide-2" data-animation="fade">
+  <section id="about" class="about-section">
+    <div class="about-text animate-in">
+      <h2 class="underline">About Manni's Hub</h2>
+      <p>Welcome to Manni's Hub, where learning meets passion and innovation. We're dedicated to making education accessible, engaging, and fun for everyone—whether you're a curious student, a supportive parent, or a dedicated educator. Our handpicked collection of educational books and apps, from science adventures to language learning, is crafted to ignite a love for knowledge and empower learners to reach their full potential.</p>
+      <p>Founded by a visionary frontend developer, Manni's Hub blends technology and education to create tools that inspire. We're not just a platform; we're a movement to redefine how the world learns. Join us on this exciting journey to shape a smarter tomorrow!</p>
+      <h3 class="underline">Meet Manni, Our Founder</h3>
+      <p>I'm Manni, the founder and CEO of Manni's Hub. As a frontend developer with a deep passion for education, I set out to create a platform that makes learning accessible and joyful for all. My mission is to empower every learner with tools that spark creativity and open doors to new possibilities. Let's build a brighter future, one lesson at a time!</p>
+      <div class="founder-hobbies">
+        <h4>My Hobbies</h4>
+        <ul>
+          <li class="hobby-underline">Building Side Projects</li>
+          <li class="hobby-underline">cooking</li>
+          <li class="hobby-underline">Contributing to Open Source</li>
+          <li class="hobby-underline">Tech Blogging</li>
+          <li class="hobby-underline">watching football(ManU)</li>
+        </ul>
+      </div>
+    </div>
+     
+    <div class="about-img animate-in">
+      <img src="image (4).jpg" alt="Manni, CEO of Manni's Hub" width="200">
+    </div>
+  </section>
+  <section id="skills" class="skills-section">
+    <h2 class="underline">Skills</h2>
+    <div class="skills-columns">
+      <div class="column animate-in">
+        <h3>Languages</h3>
+        <ul>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+      <div class="column animate-in">
+        <h3>Frameworks</h3>
+        <ul>
+          <li>React</li>
+          <li>Node</li>
+          <li>WordPress</li>
+        </ul>
+      </div>
+      <div class="column animate-in">
+        <h3>Tools & Design</h3>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>Chrome DevTools</li>
+          <li>User Testing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+    <!-- Slide 3: Products -->
+    <div class="slide slide-3" data-animation="fade">
+      <section id="products" class="product-gallery">
+        <h2 class="underline">Our Educational Products</h2>
+        <div class="product-grid">
+          <div class="product-card animate-in">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80" alt="Mathematics Made Easy Book Cover" loading="lazy"/>
+            <h3>Mathematics Made Easy</h3>
+            <p class="price">Price: ₦2000</p>
+            <button onclick="addToCart('Mathematics Made Easy', 2000)">Add to Cart</button>
+          </div>
+          <div class="product-card animate-in">
+            <img src="proxy-image 15.jpeg" alt="Science Application Interface" loading="lazy"/>
+            <h3>Science Application</h3>
+            <p class="price">Price: ₦2500</p>
+            <button onclick="addToCart('Science Application', 2500)">Add to Cart</button>
+          </div>
+          <div class="product-card animate-in">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=400&q=80" alt="English Literature Book Cover" loading="lazy"/>
+            <h3>English Literature Book</h3>
+            <p class="price">Price: ₦1200</p>
+            <button onclick="addToCart('English Literature Book', 1200)">Add to Cart</button>
+          </div>
+          <div class="product-card animate-in">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Language Learning App Interface" loading="lazy"/>
+            <h3>Language Learning App</h3>
+            <p class="price">Price: ₦3000</p>
+            <button onclick="addToCart('Language Learning App', 3000)">Add to Cart</button>
+          </div>
+          <div class="product-card animate-in">
+            <img src="history.jpeg" alt="History Book Cover" loading="lazy"/>
+            <h3>History Book</h3>
+            <p class="price">Price: ₦1300</p>
+            <button onclick="addToCart('History Book', 1300)">Add to Cart</button>
+          </div>
+          <div class="product-card animate-in">
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80" alt="Physics Fundamentals Book Cover" loading="lazy"/>
+            <h3>Physics Fundamentals</h3>
+            <p class="price">Price: ₦1800</p>
+            <button onclick="addToCart('Physics Fundamentals', 1800)">Add to Cart</button>
+          </div>
+          <div class="product-card animate-in">
+            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80" alt="Chemistry Essentials Book Cover" loading="lazy"/>
+            <h3>Chemistry Essentials</h3>
+            <p class="price">Price: ₦1600</p>
+            <button onclick="addToCart('Chemistry Essentials', 1600)">Add to Cart</button>
+          </div>
+          <div class="product-card animate-in">
+            <img src="proxy-image 7.png" alt="Coding for Kids App Interface" loading="lazy"/>
+            <h3>Coding for Kids App</h3>
+            <p class="price">Price: ₦2800</p>
+            <button onclick="addToCart('Coding for Kids App', 2800)">Add to Cart</button>
+          </div>
+          <div class="product-card animate-in">
+            <img src="proxy-image (3).jpeg" alt="Geography Explorer Book Cover" loading="lazy"/>
+            <h3>Geography Explorer</h3>
+            <p class="price">Price: ₦1400</p>
+            <button onclick="addToCart('Geography Explorer', 1400)">Add to Cart</button>
+          </div>
+          <div class="product-card animate-in">
+            <img src="proxy-image 16.webp" alt="Quiz Master App Interface" loading="lazy"/>
+            <h3>Quiz Master App</h3>
+            <p class="price">Price: ₦3000</p>
+            <button onclick="addToCart('Quiz Master App', 3000)">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Slide 4: Cart, Contact, Footer -->
+<div class="slide slide-4" data-animation="fade">
+  <section id="cart" class="cart-section">
+    <h2 class="animate-in">Your Cart</h2>
+    <div id="cart-items" class="cart-items animate-in"></div>
+    <h3 id="cart-total" class="cart-total animate-in" data-animate-delay="0.2s">Total: ₦0</h3>
+    <div class="checkout animate-in" data-animate-delay="0.4s">
+      <h3 class="checkout-title">Checkout Details</h3>
+      <p class="bank-info"><strong>Transfer to:</strong> Zenith Bank - 2189077479</p>
+      <div class="checkout-form">
+        <div class="form-group">
+          <label for="username">Your Name</label>
+          <input type="text" id="username" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label for="userphone">Phone Number</label>
+          <input type="text" id="userphone" placeholder="Enter your phone number" required />
+        </div>
+        <button class="btn-checkout" onclick="checkout()">Checkout via WhatsApp</button>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact-section">
+    <h2 class="animate-in">Get in Touch</h2>
+    <form id="contact-form" class="contact-form animate-in" onsubmit="submitForm(event)" data-animate-delay="0.2s">
+      <div class="form-group">
+        <label for="contact-name">Your Name</label>
+        <input type="text" id="contact-name" placeholder="Enter your name" required />
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Your Email</label>
+        <input type="email" id="contact-email" placeholder="Enter your email" required />
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Your Message</label>
+        <textarea id="contact-message" rows="5" placeholder="Write your message" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+    <div id="form-response" class="form-response animate-in" data-animate-delay="0.4s"></div>
+  </section>
+  <footer class="animate-in" data-animate-delay="0.6s">
+    <p>Designed & Developed by Manni ✨ 2025</p>
+    <div class="social-icons">
+      <a href="https://wa.me/+2348141609499" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" />
+      </a>
+      <a href="https://instagram.com/manniukim9" target="_blank" rel="noopener noreferrer" title="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon" />
+      </a>
+      <a href="https://twitter.com/Manniukim07" target="_blank" rel="noopener noreferrer" title="Twitter">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter Icon" />
+      </a>
+    </div>
+  </footer>
+</div>
+
+  <!-- Slider Navigation -->
+  <div class="slider-nav">
+    <button class="nav-prev" aria-label="Previous Slide">❮</button>
+    <button class="nav-next" aria-label="Next Slide">❯</button>
+    <div class="nav-dots">
+      <span class="dot active" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+      <span class="dot" data-slide="4"></span>
+    </div>
+  </div>
+
+  <script src="newpro3js.js"></script>
+</body>
+</html>
